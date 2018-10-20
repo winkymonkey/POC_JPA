@@ -1,4 +1,4 @@
-package com.example.dManyToMany_unidirectional;
+package com.example.c_manyTOmany;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -6,21 +6,18 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "T_AUTHOR")
-@SequenceGenerator(name = "AUTHOR_SEQUENCE", sequenceName = "AUTHOR_SEQUENCE", allocationSize = 1)
 public class Author {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "AUTHOR_SEQUENCE")
+	@GeneratedValue
 	@Column(name = "AUTHOR_ID")
 	private long authorId;
 

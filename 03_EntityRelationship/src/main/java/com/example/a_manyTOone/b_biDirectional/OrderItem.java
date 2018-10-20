@@ -1,4 +1,4 @@
-package com.example.manyTOone.b_biDirectional;
+package com.example.a_manyTOone.b_biDirectional;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
