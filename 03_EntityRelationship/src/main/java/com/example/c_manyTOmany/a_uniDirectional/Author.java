@@ -1,4 +1,4 @@
-package com.example.c_manyTOmany;
+package com.example.c_manyTOmany.a_uniDirectional;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -26,7 +26,6 @@ public class Author {
 				joinColumns = {@JoinColumn(name = "fk_author")}, 
 				inverseJoinColumns = {@JoinColumn(name = "fk_book")})
 	private Set<Book> books = new HashSet<Book>();
-	
 	
 	//Getter, Setter
 }

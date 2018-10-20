@@ -1,4 +1,4 @@
-package com.example.c_manyTOmany;
+package com.example.c_manyTOmany.b_biDirectional;
 
 import java.util.HashSet;
 import java.util.Set;
