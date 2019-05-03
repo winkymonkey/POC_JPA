@@ -5,19 +5,20 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+
 public class MainApp {
 	public static void main(String[] args) {
 		MainApp main = new MainApp();
-		main.run();
+		main.doIt();
 	}
 
-	public void run() {
-		EntityManagerFactory emFactory = null;
+	public void doIt() {
+		EntityManagerFactory factory = null;
 		EntityManager em = null;
 		EntityTransaction tx = null;
 		try {
-			emFactory = Persistence.createEntityManagerFactory("oracle-hibernate");
-			em = emFactory.createEntityManager();
+			factory = Persistence.createEntityManagerFactory("oracle-hibernate");
+			em = factory.createEntityManager();
 			tx = em.getTransaction();
 			tx.begin();
 			
@@ -37,8 +38,10 @@ public class MainApp {
 		finally {
 			if (em != null)
 				em.close();
-			if (emFactory != null)
-				emFactory.close();
+			if (factory != null)
+				factory.close();
 		}
 	}
 }
+
+
